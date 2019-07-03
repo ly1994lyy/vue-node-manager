@@ -19,7 +19,7 @@ module.exports= app =>{
         User.findOne({email:req.body.email})
         .then((user)=>{
             if(user){
-                return res.status(400).json({email:'邮箱已被注册!'})
+                return res.status(400).json('邮箱已被注册!')
             }else{
                 const url = gravatar.url(req.body.email, {s: '200', r: 'pg', d: 'mm'});
                 const newUser = new User({
@@ -50,7 +50,7 @@ module.exports= app =>{
         User.findOne({email})
                         .then(user => {
                             if(!user){
-                                return res.status(400).json({email:'用户不存在!'})
+                                return res.status(400).json('用户不存在!')
                             }
                             bcrypt.compare(password, user.password)
                                 .then(isMatch=>{
@@ -69,7 +69,7 @@ module.exports= app =>{
                                             })
                                         })
                                     }else{
-                                        return res.status(400).json({password:'密码错误'})
+                                        return res.status(400).json('密码错误')
                                     }
                                 })
                         })
