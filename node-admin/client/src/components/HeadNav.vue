@@ -48,7 +48,7 @@ export default {
             }
         },
         showIndoList(){
-
+          this.$router.push('/infoshow')
         },
         logout(){
             //清除token

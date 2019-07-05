@@ -61,7 +61,7 @@ module.exports= app =>{
                                             avatar:user.avatar,
                                             identity:user.identity
                                         }
-                                        jwt.sign(rule,'secret',{expiresIn:20},(err,token)=>{
+                                        jwt.sign(rule,'secret',{ expiresIn:3600 },(err,token)=>{
                                             if(err) throw err;
                                             res.json({
                                                 success:true,
