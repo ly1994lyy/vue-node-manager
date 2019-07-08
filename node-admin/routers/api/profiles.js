@@ -42,7 +42,7 @@ module.exports= app =>{
     })
 
     //编辑信息
-    router.put('/edit/:id',passport.authenticate('jwt',{session:false}),(req,res)=>{
+    router.post('/edit/:id',passport.authenticate('jwt',{session:false}),(req,res)=>{
         const profileFields = {}
         if(req.body.type) profileFields.type = req.body.type
         if(req.body.describe) profileFields.describe = req.body.describe
