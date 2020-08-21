@@ -78,7 +78,7 @@ export default {
                 if(valid){
                     const url = this.dialog.option == 'add'? 'add' : `edit/${this.formData.id}`
                     this.$http.post(`/api/profiles/${url}`,this.formData)
-                    .then(res=>{
+                    .then(()=>{
                         this.$message({
                             message:'数据添加成功',
                             type:'success'

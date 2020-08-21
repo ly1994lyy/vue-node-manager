@@ -15,8 +15,13 @@ function startLoading(){
 function endLoading(){
     loading.close()
 }
+
+const http = axios.create({
+    baseURL:'http://localhost:3000/'
+})
+
 //请求拦截
-axios.interceptors.request.use(config=>{
+http.interceptors.request.use(config=>{
     startLoading();
     if(localStorage.eleToken){
         //设置统一请求头
@@ -29,7 +34,7 @@ axios.interceptors.request.use(config=>{
 
 
 //响应拦截
-axios.interceptors.response.use(response=>{
+http.interceptors.response.use(response=>{
     endLoading();
     return response;
 },error=>{
@@ -48,4 +53,4 @@ axios.interceptors.response.use(response=>{
 })
 
 
-export default axios
+export default http

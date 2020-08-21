@@ -75,7 +75,7 @@ export default {
             this.$refs[formName].validate((valid) => {
             if (valid) {
                 this.$http.post('/api/users/register',this.registerUser)
-                        .then(res=>{
+                        .then(()=>{
                             this.$message({
                                 message:'注册成功',
                                 type:'success'

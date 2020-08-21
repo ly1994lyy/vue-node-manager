@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import axios from './http'
+import http from './http'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
@@ -8,7 +8,7 @@ import './plugins/element.js'
 import '../public/iconfont/iconfont.css'
 Vue.config.productionTip = false
 
-Vue.prototype.$http = axios
+Vue.prototype.$http = http
 
 new Vue({
   router,

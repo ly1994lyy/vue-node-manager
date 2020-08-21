@@ -208,7 +208,7 @@ export default {
             }
         },
         handleDelete(index,row){
-            this.$http.delete(`/api/profiles/delete/${row._id}`).then(res=>{
+            this.$http.delete(`/api/profiles/delete/${row._id}`).then(()=>{
                 this.$message('删除成功')
                 this.getProfile()
             })

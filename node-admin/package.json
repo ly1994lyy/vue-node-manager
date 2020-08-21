@@ -4,19 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-install":"npm install --prefix client",
-    "client":"npm start --prefix client",
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon ./server.js",
-    "dev":"concurrently \"npm run serve\" \"npm run client\""
+    "dev": "concurrently \"npm run serve\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
-    "concurrently": "^4.1.1",
+    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "express": "^5.0.0-alpha.7",
     "gravatar": "^1.8.0",
